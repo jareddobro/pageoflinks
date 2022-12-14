@@ -135,11 +135,9 @@ a:hover, p.social a:hover {
 @media screen and (max-width: 1023px) {
     #page {
     position: static;
-    background-size: cover;
+    background-size: contain;
     }
-    ul {
-    width: auto;
-    }
+
 
     ul li {
     line-height: 1.9;

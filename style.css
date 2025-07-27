@@ -156,7 +156,15 @@ a:hover, p.social a:hover {
     }
 
 
-
+@media screen and (max-width: 600px) {
+  #page {
+    background-size: 120%;
+    background-position: center top;
+    padding: 5vw 2vw 5vw 2vw;
+    /* Optionally, hide the image if it gets in the way: */
+    background-image: none;
+    
+  }
 
 
 }

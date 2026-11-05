@@ -1,0 +1,171 @@
+/*reset*/a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/*   font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV); */
+
+@font-face {
+  font-family: 'Recursive';
+  font-style: oblique 0deg 15deg;
+  font-weight: 300 1000;
+  font-display: swap;
+  src: url('Resources/woff2_variable_subsets/Recursive_VF_1.047--subset_range_english_basic.woff2') format('woff2');
+  unicode-range: U+0020-007F,U+00A9,U+2190-2193,U+2018,U+2019,U+201C,U+201D,U+2022;
+}
+
+
+.recursive {
+  font-family: Recursive, Baskerville;
+  font-variation-settings: "MONO" 0, "CASL" 0;
+  /* transition: font-weight .5s ease-in-out, font-variation-settings .5s ease-in-out; */
+}
+
+.recursive:hover {
+  font-family: Recursive, Baskerville;
+  font-weight: 1000;
+  font-variation-settings: "MONO" 1, "CASL" 1;
+}
+
+.headerfont {
+  font-family: Recursive, Baskerville;
+  font-variation-settings: "MONO" .3, "CASL" .46, "wght" 577, "slnt" -8.6, "CRSV" 0;
+}
+
+body, html {
+  font-family: Palatino, 'Palatino Linotype', Baskerville, Times, 'Times New Roman', serif;
+  line-height: 1.5;
+  background: #eee;
+  text-rendering:geometricPrecision;
+  color: #222;
+}
+
+#page {
+  background: white;
+  background-image: url(Resources/jdobrovectorAsset\ 1@2x.png);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: right;
+  box-shadow: 0px 3px 13px rgba(0,0,0,0.07);
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+  bottom: 2vw;
+  left: 2vw;
+  padding: 7vw 5vw 7vw 7vw;
+  overflow: hidden;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+  padding: 10vh 0 .25em;
+  line-height: 1;
+  font-style: italic;
+  letter-spacing: -.5px;
+}
+h1 span {
+  color: #bbb;
+}
+p.location {
+  font-size: 13px;
+  color: rgb(167, 167, 167);
+  font-family: Recursive, Verdana, Arial, sans-serif;
+  font-variation-settings: 'MONO' 1, "CASL" 0;
+  letter-spacing: .5px;
+  margin-bottom: 15vh;
+}
+
+ul {
+  width: 24%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 2em;
+}
+
+ /* ul li:first-child, p.social strong {
+  font-family: Recursive, 'Arial Black', Arial, sans;
+  font-weight: black;
+  font-variation-settings: "MONO" 1, "CASL" 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 1em;
+  margin-right: 2em;
+}  */
+
+ul li {
+  line-height: 4.5vh;
+  font-size: 25px;
+}
+a {
+  color: #222;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+}
+
+p.social, p.social a {
+  color: #aaa;
+}
+
+p.social a {
+  border-bottom: 0px;
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 13px;
+  font-family: Verdana, Arial, sans-serif;
+  letter-spacing: .5px;
+  display: inline-block;
+  padding: 2px;
+  color: #aaa;
+  transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  border-bottom: 1px solid rgba(0,0,0,0);
+
+}
+
+a:hover, p.social a:hover {
+  /* border-bottom: 1px solid rgba(0,0,0,0); */
+  color: coral;
+}
+
+/*responsive styles below ---------------------------------------------*/
+
+@media screen and (max-width: 1023px) {
+    #page {
+    position: static;
+    background-size: contain;
+    }
+
+
+    ul li {
+    line-height: 1.9;
+    font-size: 20px;
+    }
+
+    a {
+      display: block;
+    }
+
+    p.social a {
+    display: block;
+    padding: 0px;
+    font-size: 15px;
+    line-height: 2;
+    }
+
+@media screen and (max-width: 600px) {
+  #page {
+    background-size: 120%;
+    background-position: center top;
+    padding: 5vw 2vw 5vw 2vw;
+    /* Optionally, hide the image if it gets in the way: */
+    background-image: none;
+  }
+}
+
+
+
+
+}
